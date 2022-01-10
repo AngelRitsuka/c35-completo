@@ -12,7 +12,7 @@ function setup(){
   hypnoticBall.shapeColor = "red";
 
 //.ref é para localizar
-  var hypnoticBallPosition = database.ref('ball/position');
+  var hypnoticBallPosition = database.ref('bola/position');
 //.on é para acompanhar as mudanças, um ouvinte
   hypnoticBallPosition.on("value", readPosition, showError);
 }
@@ -42,7 +42,7 @@ function draw(){
 
 //as aspas é para dizer que o x e o y foram tirados do database ball/position
 function writePosition(x,y){
-  database.ref('ball/position').set({
+  database.ref('bola/position').set({
     'x': position.x + x ,
     'y': position.y + y 
   })
